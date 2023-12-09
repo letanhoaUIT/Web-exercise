@@ -1,0 +1,97 @@
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.logo {
+  font-size: 200%;
+  padding: 50px 20px;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.grid {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 980px;
+}
+
+nav {
+  background-color: #000;
+  padding: 0.5em;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+
+.photos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feature {
+  width: 200px;
+}
+
+/*3.1
+21522081
+*/
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*3.2
+21522081
+*/
+nav {
+  position: sticky; /*giữ thanh điều hướng cố định khi khung nhìn bị cuộn*/
+  top: 0;
+  z-index: 100; /* Đảm bảo thanh điều hướng hiển thị trên các phần còn lại của trang */
+}
+/*3.3
+21522081
+*/
+.feature {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+/*3.4
+21522081
+*/
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Tạo hai cột có kích thước linh hoạt */
+  grid-gap: 20px; /* Khoảng cách giữa hai cột */
+}
+/*3.5
+21522081
+*/
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 1px;
+}
+
+
+
+
+
