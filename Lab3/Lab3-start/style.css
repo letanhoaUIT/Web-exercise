@@ -1,0 +1,191 @@
+/* General setup */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+
+
+@font-face {
+  font-family:'serif';
+  src: url(Libre_Baskerville/LibreBaskerville-Regular.ttf)
+}
+@font-face {
+  font-family: 'sans-serif';
+  src: url(Open_Sans/static/OpenSans-Light.ttf)
+  /*21522081 Le Tan Hoa*/
+}
+body {
+  font-family: serif;
+  /*21522081 Le Tan Hoa*/
+}
+h1 ,h2 {
+  font-family: sans-serif;
+}
+
+/* set font page 10px */
+/*21522081 Le Tan Hoa*/
+body {
+  font-size: 10px;
+}
+/* set sensible relative unit for header*/
+h1, h2 {
+  font-size: 1.5em; /*gấp 1.5 lần 10px */
+}
+p {
+  font-size: 1em;
+}
+/*Set line-height for body*/
+body {
+  line-height: 1.5;
+}
+/*Center h1 header*/
+h1 {
+  text-align: center;
+}
+/*add space between words in header*/
+h1, h2 {
+  letter-spacing: 2px /*add 2px between letters*/
+}
+
+p {
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+/* Đặt đoạn đầu tiên sau mỗi tiêu đề trong phần tử <section> có thụt lề */
+/*21522081 Le Tan Hoa*/
+section h2 + p {
+  text-indent: 20px;
+}
+
+/*3.3 Link lien ket */
+/* Màu sắc cho các trangj thái cơ bản của liên kết*/
+/*21522081*/
+a:link, a:visited {
+  color:#a66;
+}
+
+/*Màu sắc khi di chuột qua liên kết*/
+a:hover, a:focus {
+  color:#a66;
+  text-decoration: none;
+}
+/*21522081*/
+a:focus {
+  outline: none;
+}
+/*21522081*/
+a:active {
+  color: #f00; /* Đổi màu văn bản khi trạng thái active */
+  transform: scale(1.2); /* Tăng kích thước liên kết lên 120% */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Thêm bóng chữ */
+  transition: all 0.2s ease;
+}
+/*21522081*/
+a.symbol:after {
+  content: " "; /* Đặt nội dung pseudo-element */
+  display: inline-block; /* Hiển thị pseudo-element như một phần tử inline-block */
+  width: 7px; /* Độ rộng của pseudo-element */
+  height: 7px; /* Chiều cao của pseudo-element */
+  background-image: url('external-link-52.png'); /* Đường dẫn đến hình ảnh */
+  background-size: 7px 7px; /* Kích thước của hình ảnh */
+  background-repeat: no-repeat; /* Ngăn lặp lại hình ảnh nền */
+  margin-left: 1px; /* Khoảng cách giữa liên kết và biểu tượng */
+}
+
+
+/* Reset các thuộc tính mặc định cho danh sách và mục danh sách */
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+ 
+}
+/* Đảm bảo khoảng cách giữa danh sách và danh sách giống với khoảng cách giữa các đoạn văn và đoạn văn */
+ul, ol {
+  margin-bottom: 20px; /* Đặt khoảng cách giữa danh sách */
+  padding-left: 20px; /* Đặt thụt đầu dòng cho danh sách */
+}
+
+/* Đảm bảo khoảng cách giữa danh sách và các mục danh sách hòa hợp với tổng thể trang web */
+li {
+  margin-bottom: 10px; /* Đặt khoảng cách giữa các mục danh sách */
+  line-height: 1; /* Đặt line-height cho danh sách */
+}
+/*21522081*/
+/* Đặt mục đầu dòng cho danh sách */
+.normal-list li {
+  list-style-type: disc;
+  margin-right: 5px; /* Đặt khoảng cách giữa biểu tượng và mục danh sách */
+}
+ol {
+  list-style-type: lower-alpha;
+  margin-right: 5px; /* Đặt khoảng cách giữa biểu tượng và mục danh sách */
+}
+
+.navigation-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Hiển thị các ô menu theo chiều dọc */
+}
+
+.navigation-menu li {
+  margin-bottom: 10px; /* Khoảng cách giữa các ô menu */
+}
+
+.navigation-menu a {
+  text-decoration: none;
+  color: #a66;
+  font-size: 1.5em; /* Chữ trong ô lớn hơn 1.5 lần */
+  padding: 10px; /* Khoảng cách trong ô menu */
+  border: 1px solid #a66;
+  border-radius: 0;
+  display: block; /* Để mỗi ô menu chiếm toàn bộ chiều ngang */
+  text-align: center; /* Căn giữa văn bản trong ô menu */
+}
+
+.navigation-menu a:hover {
+  background-color: #a66;
+  color: #fff;
+
+}
